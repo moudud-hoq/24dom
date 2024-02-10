@@ -11,6 +11,8 @@
 // --------------------------------------------------------------------------
 //WHere to add
 const sectionList = document.getElementById('main-container');
+console.log(sectionList);
+sectionList.style.color = 'red';
 //what to be added
 const section = document.createElement('section');
 //what to be added
@@ -21,39 +23,34 @@ section.appendChild(h1);
 
 //what to be added
 const ul = document.createElement('ul');
-
 const li1 = document.createElement('li')
 li1.innerText = 'getElementByTagName'
 ul.appendChild(li1);
-
-//what to be added
-const li2 = document.createElement('li')
-li2.innerText = 'getElementById'
-ul.appendChild(li2);
-
-//what to be added
-const li3 = document.createElement('li')
-li3.innerText = 'getElementsByClassName'
-ul.appendChild(li3);
-
 //what to be added
 const li4 = document.createElement('li')
 li4.innerText = 'querySelector'
 ul.appendChild(li4);
 
-
 section.appendChild(ul);
 sectionList.appendChild(section);
 
-//set innerHTML directly
-const sectionDress=document.createElement('section');
-sectionDress.innerHTML=`
-<h1>My Dress Section</h1>
-<ul>
-<li>I Love Jacket</li>
-<li>I Love Jacket</li>
-<li>I Love Jacket</li>
-<li>I Love Jacket</li>
-</ul>
 
+const foodBill = document.createElement('section');
+foodBill.innerHTML = `
+<h1>Tania Will Treate me today</h1>
+<p>The treat is for his outstanding result</p>
+<ul>
+<li>01. Platter</li>
+<li>02. Burger</li>
+<li>03. Cake</li>
+<li>04. Chicken Fry</li>
+</ul>
 `
+foodBill.id = 'foodlist';
+sectionList.appendChild(foodBill);
+
+const foodBillOfTania = document.getElementById('foodBill');
+console.log(foodBillOfTania)
+foodBillOfTania.style.backgroundColor='blue';
+
+
