@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+
+<body id="body">
+    <!-- ul>li#item-$*6>lorem2 -->
+    <section id="list-container">
+        <h1>Exploring Event Bubble</h1>
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Ducimus, libero?</li>
+            <li id="item-3">Atque, aliquid.</li>
+            <li id="item-4">Labore, aliquid?</li>
+            <li id="item-5">Assumenda, eos.</li>
+            <li id="item-6">Eum, corporis.</li>
+        </ul>
+    </section>
+
+
+
+
+    <!-- Javascript Section -->
+    <script>
+        /*
+        01- document.getElementById('item-2').addEventListener('click',function(){}))
+        02-                                                       
+        */
+        document.getElementById('item-2').addEventListener('click', function () {
+            console.log('item-2 clicked');
+            // event.stopImmediatePropagation();
+            // event.stopPropagation();
+        })
+
+        document.getElementById('list-ul').addEventListener('click', function () {
+            console.log('ul clicked');
+        })
+
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('section container clicked');
+        })
+
+        document.getElementById('body').addEventListener('click', function () {
+            console.log('The Whole Body Clicked');
+        })
+
+
+    </script>
+</body>
+
+</html>
